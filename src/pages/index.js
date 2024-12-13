@@ -53,7 +53,9 @@ export default function Home() {
           {url && <img src={url} className="h-full w-full" />}
         </div>
       ) : (
-        <p className="mt-5 text-sm">loading image, please wait...</p>
+        <p className="mt-5 text-sm mx-auto self-center">
+          loading image, please wait...
+        </p>
       )}
     </div>
   );
