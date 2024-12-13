@@ -13,8 +13,10 @@ export default function useGenerateText() {
       const inputs = `generate a cool and short description for a brand. The brand name is: waterbeer. The slogan is: Water, the source of life. Beer too!. The keywords are: #beer #taste. add the keyword at the end of the description.`;
       const testPrompt = `generate a cool and short description for a brand. The intention of the post is: {${query}}. Add related hashtag at the end too`;
       const res = await instance.post("/api/llavaText/", { query: testPrompt });
-      console.log(res.data);
-      //setDescription(JSON.parse(res?.generated_text));
+      const data = res.data;
+      const parsedData = data.replace(/\s+/g, " ").trim();
+      console.log(parsedData);
+      setDescription(parsedData);
     } catch (error) {
       console.log(error);
       setError("An unknown error has occured. Please try later.");
