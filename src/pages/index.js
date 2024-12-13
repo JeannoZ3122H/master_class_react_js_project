@@ -48,10 +48,12 @@ export default function Home() {
         </div>
       )}
 
-      {!loadingImage && (
-        <div className="h-[400] w-[400] mx-auto mt-3 bg-slate-300 overflow-hidden rounded-sm">
+      {!loadingImage ? (
+        <div className="h-[200] w-[200] mx-auto mt-3 bg-slate-300 overflow-hidden rounded-sm">
           {url && <img src={url} className="h-full w-full" />}
         </div>
+      ) : (
+        <p className="mt-5 text-sm">loading image, please wait...</p>
       )}
     </div>
   );
