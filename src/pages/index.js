@@ -49,7 +49,7 @@ export default function Home() {
       )}
 
       {!loadingImage ? (
-        <div className="h-[200] w-[200] mx-auto mt-3 bg-slate-300 overflow-hidden rounded-sm">
+        <div className="h-[300px] w-[300px] mx-auto mt-3 bg-slate-300 overflow-hidden rounded-sm">
           {url && <img src={url} className="h-full w-full" />}
         </div>
       ) : (
