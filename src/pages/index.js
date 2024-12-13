@@ -1,35 +1,40 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Loader2 } from "lucide-react";
+import useGenerateText from "@/hooks/useGenerateText";
+import { useForm } from "react-hook-form";
 
 export default function Home() {
+  const { register, handleSubmit } = useForm();
+  const { generate, description, loading, error } = useGenerateText();
+
+  const onSubmit = (values) => {
+    console.log(values);
+    generate(values.query);
+  };
+
   return (
     <div
-      className={"h-screen w-full bg-white flex items-center justify-center"}
+      className={
+        "h-screen w-full bg-white flex flex-col items-center justify-center"
+      }
     >
-      <div className="flex flex-col items-center justify-center">
-        <Button>I'm a shadcn button</Button>
-        <p className="mt-4">
-          If u want to use shadcn components, first access to{" "}
-          <a className="text-blue-600" href="https://ui.shadcn.com/docs">
-            https://ui.shadcn.com/docs
-          </a>{" "}
-          and read the section for the component you want
-        </p>
-        <p className="mt-4">
-          To use zustand to store your data{" "}
-          <a className="text-blue-600" href="https://github.com/pmndrs/zustand">
-            https://github.com/pmndrs/zustand
-          </a>{" "}
-        </p>
-        <p className="mt-4">
-          To navigate between pages{" "}
-          <a
-            className="text-blue-600"
-            href="https://nextjs.org/docs/pages/building-your-application/routing/linking-and-navigating"
-          >
-            https://nextjs.org/docs/pages/building-your-application/routing/linking-and-navigating
-          </a>{" "}
-        </p>
-      </div>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex w-8/12 mx-auto items-center space-x-2"
+      >
+        <Input
+          type="query"
+          placeholder="What is your post about? (100 characters .max)"
+          {...register("query")}
+        />
+        <Button type="submit" disabled={loading}>
+          {loading && <Loader2 className="animate-spin" />} Generate a
+          description
+        </Button>
+      </form>
+
+      {description && !loading && <p className="mt-3">{description}</p>}
     </div>
   );
 }
