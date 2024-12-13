@@ -6,3 +6,83 @@
     --radius: 0.5rem
   }
 }
+body{
+    overflow-y: hidden;
+}
+
+
+.title{
+    color: darkblue !important;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.d-flex{
+    display: flex;
+}
+.justify-content-start{
+    justify-content: start;
+}
+.float-start{
+    float: left;
+}
+
+.vh-90{
+    height: 90vh;
+}
+
+/* Style personnalisé pour le formControl */
+.form-control {
+    border: 1px solid #ced4da; /* Bordure gris clair */
+    border-radius: 4px; /* Bordure arrondie */
+    padding: 10px; /* Padding pour aérer le champ */
+    font-size: 1rem; /* Taille de police normale */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour un effet fluide */
+  }
+
+  /* Change la couleur de la bordure au focus */
+  .form-control:focus {
+    border-color: #66afe9; /* Bordure bleu clair */
+    outline: none; /* Enlever le contour par défaut */
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* Ajoute une ombre bleue au focus */
+  }
+
+  /* Pour les champs d'input avec erreurs */
+  .form-control.is-invalid {
+    border-color: #dc3545; /* Bordure rouge en cas d'erreur */
+  }
+
+  .form-control.is-invalid:focus {
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* Ombre rouge pour l'erreur */
+  }
+
+  /* Pour les champs validés */
+  .form-control.is-valid {
+    border-color: #28a745; /* Bordure verte pour un champ validé */
+  }
+
+  .form-control.is-valid:focus {
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Ombre verte pour le champ validé */
+  }
+
+  /* Pour les champs disabled */
+  .form-control:disabled {
+    background-color: #e9ecef; /* Fond gris clair pour les champs désactivés */
+    cursor: not-allowed; /* Curseur désactivé */
+  }
+.ms-2{
+    margin-left: .5rem;
+}
+.w-100{
+    width: 100%;
+}
+
+.inp-label{
+    color: darkblue !important;
+    text-align: start;
+    font-weight: bolder;
+    font-size: large;
+    padding-top: 50px;
+    margin-left: 10px;
+}

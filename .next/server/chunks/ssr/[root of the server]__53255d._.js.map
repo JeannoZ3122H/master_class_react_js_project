@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 55, "column": 0}, "map": {"version":3,"sources":["file:///Users/macbookpro/Desktop/JEANNO%20EXTERNAL%20ZONE/DEV%20FREELANCE/intel-hackaton-challenge-2/src/pages/_document.js"],"sourcesContent":["import { Html, Head, Main, NextScript } from \"next/document\";\r\n\r\nexport default function Document() {\r\n    return (\r\n        <Html lang=\"en\">\r\n            <Head />\r\n            <body className=\"antialiased\">\r\n                <Main />\r\n                <NextScript />\r\n            </body>\r\n        </Html>\r\n    );\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;;AAEe,SAAS;IACpB,qBACI,qKAAC,yHAAA,CAAA,OAAI;QAAC,MAAK;;0BACP,qKAAC,yHAAA,CAAA,OAAI;;;;;0BACL,qKAAC;gBAAK,WAAU;;kCACZ,qKAAC,yHAAA,CAAA,OAAI;;;;;kCACL,qKAAC,yHAAA,CAAA,aAAU;;;;;;;;;;;;;;;;;AAI3B"}},
+    {"offset": {"line": 97, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
