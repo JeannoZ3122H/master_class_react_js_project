@@ -12,8 +12,8 @@ export default function useGenerateText() {
       setLoading(true);
       const inputs = `generate a cool and short description for a brand. The brand name is: waterbeer. The slogan is: Water, the source of life. Beer too!. The keywords are: #beer #taste. add the keyword at the end of the description.`;
       const testPrompt = `generate a cool and short description for a brand. The intention of the post is: {${query}}. Add related hashtag at the end too`;
-      const res = await generateText(testPrompt);
-      console.log(res);
+      const res = await instance.post("/api/llavaText/", { query: testPrompt });
+      console.log(res.data);
       //setDescription(JSON.parse(res?.generated_text));
     } catch (error) {
       console.log(error);
